@@ -9,8 +9,8 @@ const TrafficLightBox = () => {
 	];
 	let [lightOn, setLightOn] = useState(false);
 	function isOn() {
-		lightOn = "light-on";
-		return !setLightOn ? lightOn : setLightOn;
+		lightOn = "light-on"; //xq esta igualdad?
+		return !setLightOn ? lightOn : setLightOn; //por qué la negacion? con la interrogacion siempre se esta preguntando si es true,x eso? y el else es "setLightOn"?
 	}
 	return (
 		<div className="container d-flex flex-column align-items-center">
@@ -20,7 +20,7 @@ const TrafficLightBox = () => {
 					return (
 						<TrafficLights
 							lightColor={lightColor.color}
-							key={lightColor.id}
+							key={lightColor.id} //que se pone de key? se q es obligatoria en los .maps de react
 							onClick={isOn}
 						/>
 					);
@@ -29,4 +29,5 @@ const TrafficLightBox = () => {
 		</div>
 	);
 };
+
 export default TrafficLightBox;
