@@ -8,18 +8,22 @@
     
     import 'relative/path/to/stylesheet.scss';
 */
+body{
+    background-color: rgb(190, 190, 221);
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f4/Road_in_niigata.jpg");
+    background-size: 100%;
+}
 .traffic-box {
-    border-radius: 12%;
-    
-    width: 21.5vw;
-    height: 72vh;
+    border-radius: 12px;
+    width: 7vw;
+    height: 29vh;
 }
 .traffic-box-pole {
-    width: 5vw;
-    height: 20vh;
+    width: 1.5vw;
+    height: 15vh;
 }
 .traffic-box, .traffic-box-pole {
-    background: rgb(59, 58, 58);
+    background: black;
     border: solid 1px rgb(59, 58, 58);
 }
 .red-light {
@@ -32,19 +36,16 @@
     background: rgb(106, 168, 47);
 }
 .red-light, .orange-light, .green-light {
-    width: 18.5vw;
-    height: 21vh;
+    width: 4vw;
+    height: 7vh;
     border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2vh;
+    margin-top: 1.8vh;
 }
 .light-on {
-    background: radial-gradient(circle, rgba(234, 243, 105, 0.88) 35%, );
-    width: 18.5vw;
-    height: 21vh;
+    border: 3px solid rgba(243, 241, 105, 0.726);
+    box-shadow: 0px 0px 0px 3px rgba(255, 253, 138, 0.466);
     border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: -1;
+    
 }

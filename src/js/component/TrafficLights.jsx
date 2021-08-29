@@ -1,13 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const TrafficLight = ({ lightColor, isOn }) => {
-	return <div className={lightColor + " " + isOn}></div>; //no entiendo este componente: ni los paramentros que lepasa ni el return
+const TrafficLight = ({ lit, lightColor, lightOn, lightColorSelected }) => {
+	return (
+		<div
+			className={lightColor === lightColorSelected ? lightOn : lightColor}
+			onClick={() => lit(`${lightColor} light-on`, lightColor)}></div>
+	);
 };
 
 TrafficLight.propTypes = {
+	lit: PropTypes.func,
+
+	lightOn: PropTypes.string,
 	lightColor: PropTypes.string,
-	isOn: PropTypes.func
+	lightColorSelected: PropTypes.string
 };
 
 export default TrafficLight;
